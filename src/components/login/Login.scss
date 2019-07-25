@@ -11,21 +11,9 @@ $g-dark-grey: #333333;
 .main-login {
   color: white;
   height: 100%;
-  width: 47%;
+  width: 46%;
   padding: 134px 192px 0;
   background-color: rgba(0, 0, 0, 0.6);
-}
-
-@media only screen and (max-width: 500px) {
-  .main-login {
-    width: 100%;
-    padding: 20px;
-  }
-
-  .info-footer, .bottom-hr {
-    display: none;
-  }
-
 }
 
 .login-label hr {
@@ -40,6 +28,7 @@ $g-dark-grey: #333333;
 .form-control {
   border-radius: 3px;
   border: solid 1px #151515;
+  font-size: 16px;
   background-color: $g-gray;
   height: calc(1.5em + 0.75rem + 8px);
   color: $g-white;
@@ -94,7 +83,9 @@ form label {
 }
 
 #forgot-pass {
+  clear: right; //test this
   float: right;
+  padding-top: 10px;
   font-size: 13px;
   color: $g-white;
   text-decoration: underline;
@@ -103,3 +94,39 @@ form label {
     color: dimgray;
   }
 }
+
+.pass-visibility {
+  position: relative;
+  z-index: 999;
+  float: right;
+  right: 15px;
+  top: -29px;
+  font-size: 12px;
+  color: #aaaaaa !important;
+
+}
+
+@media only screen and (max-width: 1501px) {
+  .main-login {
+    padding: 113px 150px 0;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .main-login {
+    width: 100%;
+    padding: 30px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .main-login {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .info-footer, .bottom-hr {
+    display: none;
+  }
+}
+

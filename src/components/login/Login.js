@@ -1,15 +1,25 @@
 import React, {Component} from 'react';
-import Info from "./layout/Info";
+import Header from "./layout/Header";
 import "./Login.scss";
 
-const loginStyle = {
-        paddingTop: '20px'
-    }
-;
-
 class Login extends Component {
-    // https://edvins.io/show-and-hide-password-in-react/
-    state = {};
+    constructor(props) {
+        super(props);
+        this.state = {
+            hidden: true,
+            password: ""
+        };
+    }
+
+    visibility = () => this.setState({hidden: !this.state.hidden});
+
+    onChangePassword = () => this.setState({password: this.props.password});
+
+    componentDidMount() {
+        if (this.props.password) {
+            this.setState({password: this.props.password})
+        }
+    }
 
     onSubmit = (e) => {
         e.preventDefault();
@@ -17,9 +27,10 @@ class Login extends Component {
     };
 
     render() {
+        const {hidden, password} = this.state;
         return ( //style={{display:'flex'}}
             <form onSubmit={this.onSubmit}>
-                <div className="login padding" style={loginStyle}>
+                <div className="login padding" style={{paddingTop: '20px'}}>
 
                     <div>
                         <form className="form login-form">
@@ -33,14 +44,14 @@ class Login extends Component {
                             <div className="form-group">
                                 <label>Password</label>
                                 <div className="input-group">
-                                    <input type="password" className="form-control" id="password"
-                                           value="admin-password123"/>
+                                    <input className="form-control" id="password"
+                                           type={hidden ? "password" : "text"}
+                                           value={password}
+                                           onChange={this.onChangePassword}
+                                    />
                                 </div>
-                                <a className="myShow" style={{ float:'right', display:'block', position:'relative',top:'-32px',right:'15px'}}>
-                                    <p>Jesus</p>
-                                </a>
+                                <a className="pass-visibility"  onClick={this.visibility}>{hidden ? 'Show' : 'Hide'}</a>
                             </div>
-
                             <button type="submit" className="btn btn-submit">
                                 Sign In
                             </button>
@@ -88,7 +99,7 @@ class Login extends Component {
                     {/*    <Info/>*/}
                     {/*</form>*/}
 
-                    <Info/>
+                    <Header/>
                 </div>
             </form>
 
