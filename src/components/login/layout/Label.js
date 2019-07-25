@@ -1,5 +1,5 @@
 import React from 'react'
-import globalLogo from '../../assets/img/logo.svg'
+import globalLogo from '../../../assets/img/logo.svg'
 
 function Label() {
     return (

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Info from "./layout/Info";
+import "./Login.scss";
 
 const loginStyle = {
         paddingTop: '20px'
@@ -34,21 +35,22 @@ class Login extends Component {
                                 <div className="input-group">
                                     <input type="password" className="form-control" id="password"
                                            value="admin-password123"/>
-                                    <span className="input-group-append" style={{paddingTop: '10px'}}>
-                                         <p>Jesus</p>
-                                    </span>
                                 </div>
+                                <a className="myShow" style={{ float:'right', display:'block', position:'relative',top:'-32px',right:'15px'}}>
+                                    <p>Jesus</p>
+                                </a>
                             </div>
 
                             <button type="submit" className="btn btn-submit">
                                 Sign In
                             </button>
-                            <button type="button" onClick={this.props.triggerModal} style={{float:'right',fontSize: '13px', opacity: '', color: '#aaaaaa'}}
-                                    className="btn btn-link btn-sm right">Forgot password?
+                            <button type="button"
+                                    id="forgot-pass" onClick={this.props.triggerModal}
+                                    className="btn btn-link btn-sm">Forgot password?
                             </button>
                             {/*<a className="inputLink"*/}
                             {/*   onClick={this.props.togglePass}>{this.props.showPass ? "Hide" : "Show"}</a>*/}
-                            <hr/>
+                            <hr className='bottom-hr'/>
 
                         </form>
                     </div>
