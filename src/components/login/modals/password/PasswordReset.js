@@ -18,7 +18,6 @@ class PasswordReset extends React.Component {
 
 
     render() {
-        console.log('PasswordReset', this.props);
         return (
             <div className={"modal " + (this.props.isDisplayed ? 'display' : 'hide')}>
                 <div className="title">
