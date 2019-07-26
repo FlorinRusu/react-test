@@ -1,5 +1,5 @@
 import React from "react";
-import "./PasswordReset.scss";
+import "./passwordreset.scss";
 import {faTimesCircle} from "@fortawesome/free-solid-svg-icons"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import PropTypes from 'prop-types';
@@ -16,10 +16,9 @@ class PasswordReset extends React.Component {
          isDisplayed: false,
     };
 
-
     render() {
         return (
-            <div className={"modal " + (this.props.isDisplayed ? 'display' : 'hide')}>
+            <div id="password-reset" className={"modal " + (this.props.isDisplayed ? 'display' : 'hide')}>
                 <div className="title">
                     <p>Password Reset</p>
                     <button className="icon" onClick={this.props.onClose}>
@@ -37,7 +36,6 @@ class PasswordReset extends React.Component {
                            className="form-control"
                     />
                 </div>
-
 
                 <div className="modal-footer">
                     <button type="submit" className="btn btn-primary sbm" onClick={this.props.onSubmit}>Submit</button>

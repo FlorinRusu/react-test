@@ -2,9 +2,7 @@ import React from 'react'
 
 function Description() {
     return (
-
         <div className='row info-footer'>
-
             <div className='col-md-6 col-sm-6'>
                 <h1>LATEST BLOG POST</h1>
                 <p>October 15, 2018</p>

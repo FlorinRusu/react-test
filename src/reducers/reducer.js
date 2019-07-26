@@ -1,5 +1,5 @@
 import {ON_CONFIRMATION_TRIGGER, ON_PASSWORD_TRIGGER, ON_SUBMIT_LOGIN} from "../constants";
-import {initialState} from "./initialState";
+import {initialState} from "./initial.state";
 
 export default function appReducer(state = initialState.app, action) {
     console.log('reducer', action, state);

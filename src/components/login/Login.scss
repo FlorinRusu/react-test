@@ -2,12 +2,6 @@ $g-gray: #555555;
 $g-white: #aaaaaa;
 $g-dark-grey: #333333;
 
-#globalLogo {
-  width: 237px;
-  height: 52px;
-  margin-top: 15px;
-}
-
 hr {
   height: 3px;
   background-color: $g-dark-grey;
@@ -20,6 +14,12 @@ input, .btn-submit {
 form label {
   font-size: 16px;
   color: $g-white;
+}
+
+#globalLogo {
+  width: 237px;
+  height: 52px;
+  margin-top: 15px;
 }
 
 .main-login {
@@ -111,13 +111,6 @@ form label {
 @media only screen and (max-width: 1499px) {
   .main-login {
     padding: 113px 150px 0;
-  }
-}
-
-@media only screen and (min-width: 451px) {
-  .main-login {
-    width: 100%;
-    padding: 30px;
   }
 }
 

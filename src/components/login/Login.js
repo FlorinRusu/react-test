@@ -11,7 +11,6 @@ class Login extends Component {
             password: ""
         };
     }
-
     static propTypes = {
         onLogin: PropTypes.func.isRequired,
         triggerModal: PropTypes.func.isRequired,
@@ -56,7 +55,7 @@ class Login extends Component {
                                 </div>
                                 <a className="pass-visibility" onClick={this.visibility}>{hidden ? 'Show' : 'Hide'}</a>
                             </div>
-                            <button type="submit" className="btn btn-submit" onClick={this.onSubmit}>Sign In</button>
+                            <button type="submit" className="btn btn-submit">Sign In</button>
                             <button type="button"
                                     id="forgot-pass" onClick={this.props.triggerModal}
                                     className="btn btn-link btn-sm">Forgot password?

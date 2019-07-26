@@ -1,5 +1,5 @@
 import React from "react";
-import "./EmailSent.scss";
+import "./emailsent.scss";
 import {faTimesCircle} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import PropTypes from 'prop-types';
@@ -17,9 +17,8 @@ class EmailSent extends React.Component {
     };
 
     render() {
-        console.log('confirmation', this.props);
         return (
-            <div className={"modal " + (this.props.isDisplayed ? 'display' : 'hide')}>
+            <div id="email-sent" className={"modal " + (this.props.isDisplayed ? 'display' : 'hide')}>
                 <div className="title">
                     <p>Email Sent</p>
                     <button className="icon" onClick={this.props.onClose}>
@@ -30,7 +29,6 @@ class EmailSent extends React.Component {
                     <p>Thank you, instructions to reset your password have been e-mailed to the address you
                         provided!</p>
                 </div>
-
             </div>
         );
     }
