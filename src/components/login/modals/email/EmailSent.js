@@ -19,7 +19,7 @@ class EmailSent extends React.Component {
     render() {
         console.log('confirmation', this.props);
         return (
-            <div className={"modal " + (this.props.isDisplayed ? '' : 'hide')}>
+            <div className={"modal " + (this.props.isDisplayed ? 'display' : 'hide')}>
                 <div className="title">
                     <p>Email Sent</p>
                     <button className="icon" onClick={this.props.onClose}>
