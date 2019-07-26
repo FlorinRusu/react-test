@@ -19,19 +19,4 @@ export class App extends Component {
         );
     }
 }
-
-// const main = {
-//     color: 'white',
-//     height: '100%',
-//     width: '47%',
-//     paddingTop: '134px',
-//     paddingLeft: '192px',
-//     paddingRight: '192px',
-//     // opacity: 0.6,
-//     backgroundColor: 'rgba(0,0,0,0.6)'
-// };
-//Left-block-width:  895.87px - 896 ~ px
-//Inner-padding-left: 191.89px ~ 192px
-//Inner-padding-top: 135.54px ~
-
 export default App;
