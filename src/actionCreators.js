@@ -1,11 +1,19 @@
 import {ON_CONFIRMATION_TRIGGER, ON_PASSWORD_TRIGGER, ON_SUBMIT_LOGIN} from "./constants";
 
 export function togglePassword() {
-    return {type: ON_PASSWORD_TRIGGER};
+    return dispatch => {
+        dispatch({
+            type: ON_PASSWORD_TRIGGER
+        });
+    };
 }
 
 export function toggleConfirmation() {
-    return {type: ON_CONFIRMATION_TRIGGER};
+    return dispatch => {
+        dispatch({
+            type: ON_CONFIRMATION_TRIGGER
+        });
+    };
 }
 
 export function submitLogin(user, pass) {

@@ -23,15 +23,23 @@ export class App extends Component {
         isConfirmationDisplayed: false,
     };
 
+
+    state = App.defaultProps;
+
+    onResetSubmit = () => {
+        this.props.toggleResetPwd();
+        this.props.togleCnfrm();
+    };
+
     render() {
         return (
             <div className="main-login">
                 <div>
                     <EmailSent isDisplayed={this.props.isConfirmationDisplayed} onClose={this.props.togleCnfrm}/>
                     <PasswordReset isDisplayed={this.props.isResetDisplayed} onClose={this.props.toggleResetPwd}
-                                   onSubmit={this.props.togleCnfrm}/>
+                                   onSubmit={this.onResetSubmit}/>
                     <Label/>
-                    <Login/>
+                    <Login onLogin={this.props.login} triggerModal={this.props.toggleResetPwd}/>
                 </div>
             </div>
         );
@@ -41,8 +49,8 @@ export class App extends Component {
 
 function mapStateToProps(state) {
     return {
-        isResetDisplayed: state.isResetDisplayed,
-        isConfirmationDisplayed: state.isConfirmationDisplayed,
+        isResetDisplayed: state.appReducer.isResetDisplayed,
+        isConfirmationDisplayed: state.appReducer.isConfirmationDisplayed,
     };
 }
 
