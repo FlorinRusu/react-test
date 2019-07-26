@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Header() {
+function Description() {
     return (
 
         <div className='row info-footer'>
@@ -23,4 +23,4 @@ function Header() {
     )
 }
 
-export default Header;
+export default Description;

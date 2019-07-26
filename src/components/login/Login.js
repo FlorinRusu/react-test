@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Header from "./layout/Header";
+import Description from "./layout/Description";
 import "./Login.scss";
 
 class Login extends Component {
@@ -23,86 +23,45 @@ class Login extends Component {
 
     onSubmit = (e) => {
         e.preventDefault();
-
     };
 
     render() {
         const {hidden, password} = this.state;
-        return ( //style={{display:'flex'}}
+        return (
             <form onSubmit={this.onSubmit}>
                 <div className="login padding" style={{paddingTop: '20px'}}>
-
                     <div>
                         <form className="form login-form">
                             <div className="form-group">
                                 <label>Username</label>
-                                <input type="text" autoFocus="autofocus"
-                                       className="form-control" name="txtusername"
+                                <input spellCheck="false" type="text" autoFocus="autofocus"
+                                       className="form-control" name="username"
                                        id="username"/>
                             </div>
 
                             <div className="form-group">
                                 <label>Password</label>
                                 <div className="input-group">
-                                    <input className="form-control" id="password"
+                                    <input spellCheck="false" className="form-control"
+                                           id="password" name="password"
                                            type={hidden ? "password" : "text"}
                                            value={password}
                                            onChange={this.onChangePassword}
                                     />
                                 </div>
-                                <a className="pass-visibility"  onClick={this.visibility}>{hidden ? 'Show' : 'Hide'}</a>
+                                <a className="pass-visibility" onClick={this.visibility}>{hidden ? 'Show' : 'Hide'}</a>
                             </div>
-                            <button type="submit" className="btn btn-submit">
-                                Sign In
-                            </button>
+                            <button type="submit" className="btn btn-submit">Sign In</button>
                             <button type="button"
                                     id="forgot-pass" onClick={this.props.triggerModal}
                                     className="btn btn-link btn-sm">Forgot password?
                             </button>
-                            {/*<a className="inputLink"*/}
-                            {/*   onClick={this.props.togglePass}>{this.props.showPass ? "Hide" : "Show"}</a>*/}
                             <hr className='bottom-hr'/>
-
                         </form>
                     </div>
-
-
-                    {/*<form onSubmit={this.handleSubmit}>*/}
-                    {/*    <label htmlFor="username">Username</label>*/}
-                    {/*    <input name="username"*/}
-                    {/*           type="text"*/}
-                    {/*           className="form-control"*/}
-                    {/*           placeholder="Enter your email"*/}
-                    {/*           onChange={this.props.onChange}*/}
-                    {/*    />*/}
-
-                    {/*    <label htmlFor="password">Password</label>*/}
-                    {/*    <input*/}
-                    {/*        name="password"*/}
-                    {/*        type={this.props.showPass ? "text" : "password"}*/}
-                    {/*        className="form-control"*/}
-                    {/*        placeholder="Enter your password"*/}
-                    {/*        onChange={this.props.onChange}*/}
-                    {/*        value={this.props.pass}*/}
-                    {/*    />*/}
-
-                    {/*    <button type="submit" className="btn btn-primary">*/}
-                    {/*        Sign in*/}
-                    {/*    </button>*/}
-                    {/*    <button type="button"*/}
-                    {/*            onClick={this.props.triggerModal}*/}
-                    {/*            className="btn btn-link btn-sm right">Forgot password?*/}
-                    {/*    </button>*/}
-                    {/*    <a className="inputLink"*/}
-                    {/*       onClick={this.props.togglePass}>{this.props.showPass ? "Hide" : "Show"}</a>*/}
-                    {/*    <hr/>*/}
-                    {/*    <Info/>*/}
-                    {/*</form>*/}
-
-                    <Header/>
+                    <Description/>
                 </div>
             </form>
-
         )
     }
 }
