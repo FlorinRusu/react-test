@@ -5,7 +5,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 
 function PasswordReset() {
     return (
-        <div className="modal display">
+        <div className="modal display password-reset">
             <div className="title">
                 <p>Password Reset</p>
                 <button className="icon">

@@ -17,8 +17,8 @@
   color: #555555;
 }
 
-svg {
-  margin-left: 319px;
+.email-sent svg {
+  margin-left: 317px;
 }
 
 .title {
@@ -76,7 +76,7 @@ svg {
     width: 330px;
     transform: translate(-50%, -50%);
   }
-  svg {
-    margin-left: 199px;
+  .email-sent svg {
+    margin-left: 198px !important;
   }
 }

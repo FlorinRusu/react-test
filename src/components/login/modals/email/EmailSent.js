@@ -5,11 +5,11 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 
 function EmailSent() {
     return (
-        <div className="modal hide">
+        <div className="modal hide email-sent">
             <div className="title">
                 <p>Email Sent</p>
                 <button className="icon">
-                    <FontAwesomeIcon icon={faTimesCircle} size="lg"/>
+                    <FontAwesomeIcon  icon={faTimesCircle} size="lg"/>
                 </button>
             </div>
             <div className="modal-text">
