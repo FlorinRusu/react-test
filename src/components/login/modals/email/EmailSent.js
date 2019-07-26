@@ -15,7 +15,6 @@ function EmailSent() {
             <div className="modal-text">
                 <p>Thank you, instructions to reset your password have been e-mailed to the address you provided!</p>
             </div>
-
         </div>
     );
 }
